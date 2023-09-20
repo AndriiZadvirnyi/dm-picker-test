@@ -1,7 +1,7 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { bootstrapApplication } from '@angular/platform-browser';
+import {DmRangeDatePickerComponent} from './app/dm-range-date-picker.component';
+import { provideAnimations } from '@angular/platform-browser/animations'
 
-import { AppModule } from './app/app.module';
-
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+bootstrapApplication(DmRangeDatePickerComponent, {
+    providers: [provideAnimations()]
+});
